@@ -1,0 +1,24 @@
+lzc-sdk-version: "0.1"
+name: CloudSaver
+package: cloud.lazycat.app.cloudsaver
+version: 0.3.3
+description: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具
+homepage: https://github.com/jiangrui1994/CloudSaver
+author: jiangrui1994
+application:
+  subdomain: cloudsaver
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://cloudsaver:8008/
+services:
+  cloudsaver:
+    image: docker.hlmirror.com/jiangrui1994/cloudsaver:0.3.3
+    binds:
+      - /lzcapp/var/data:/app/data
+      - /lzcapp/var/config:/app/config

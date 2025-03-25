@@ -1,0 +1,11 @@
+version: "3"
+services:
+  cloudsaver:
+    image: jiangrui1994/cloudsaver:0.3.3
+    container_name: cloud-saver
+    ports:
+      - "8008:8008"
+    volumes:
+      - /your/local/path/data:/app/data
+      - /your/local/path/config:/app/config
+    restart: unless-stopped
