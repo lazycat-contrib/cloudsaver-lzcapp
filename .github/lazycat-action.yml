@@ -1,0 +1,41 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/cloudsaver.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: cloudsaver
+
+build:
+  run_buildscript: false
+
+images:
+  # 上游 jiangrui1994/cloudsaver 有完整三段 SemVer（0.2.2 ~ 0.9.0），latest/test-* 不匹配正则
+  - id: cloudsaver
+    target: service
+    service: cloudsaver
+    source: jiangrui1994/cloudsaver
+    channel: stable
+    sort: semver
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: CloudSaver
+    summary: "基于 Vue 3 + Express 的网盘资源搜索与转存工具"

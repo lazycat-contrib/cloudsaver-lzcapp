@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.cloudsaver
+version: 0.3.3
+name: CloudSaver
+description: "一个基于 Vue 3 + Express 的网盘资源搜索与转存工具"
+min_os_version: "1.5.0"
+homepage: https://github.com/jiangrui1994/CloudSaver
+author: jiangrui1994
+locales:
+  zh:
+    description: "一个基于 Vue 3 + Express 的网盘资源搜索与转存工具"
+    name: CloudSaver
+  en:
+    description: "A cloud drive resource search and transfer tool built with Vue 3 + Express"
+    name: CloudSaver
