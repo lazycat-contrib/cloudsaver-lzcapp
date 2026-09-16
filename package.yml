@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.cloudsaver
-version: 0.3.3
+version: 0.9.1
 name: CloudSaver
 description: "一个基于 Vue 3 + Express 的网盘资源搜索与转存工具"
 min_os_version: "1.5.0"
