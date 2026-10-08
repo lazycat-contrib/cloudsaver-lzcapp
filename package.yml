@@ -1,4 +1,5 @@
 package: cloud.lazycat.app.cloudsaver
+license: MIT
 version: 0.9.1
 name: CloudSaver
 description: "一个基于 Vue 3 + Express 的网盘资源搜索与转存工具"
