@@ -9,8 +9,8 @@ application:
       backend: http://cloudsaver:8008/
 services:
   cloudsaver:
-    # upstream: jiangrui1994/cloudsaver:0.9.1
-    image: registry.lazycat.cloud/czyt/jiangrui1994/cloudsaver:5d7cb3e9c06e921c
+    # upstream: jiangrui1994/cloudsaver:0.9.2
+    image: registry.lazycat.cloud/czyt/jiangrui1994/cloudsaver:484e465e68befd2e
     binds:
       - /lzcapp/var/data:/app/data
       - /lzcapp/var/config:/app/config
